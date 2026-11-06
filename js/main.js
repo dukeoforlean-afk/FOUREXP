@@ -26,7 +26,7 @@ $$('.cc').forEach(function(c){c.addEventListener('pointermove',function(e){var r
 $$('[data-topic]').forEach(function(a){a.addEventListener('click',function(){var s=$('#fi');for(var i=0;i<s.options.length;i++)if(s.options[i].text===a.getAttribute('data-topic'))s.selectedIndex=i})});
 $('#rqf').addEventListener('submit',function(e){e.preventDefault();var f=e.target,v=function(n){return f.elements[n].value.trim()};
 if(!v('ph')){$('#ok').textContent='Укажите телефон, чтобы мы могли перезвонить.';f.elements.ph.focus();return}
-var b='Имя: '+v('nm')+'\nТелефон: '+v('ph')+'\nАвтомобиль: '+v('car')+'\nИнтересует: '+v('it')+'\nЦель, бюджет, сроки: '+v('msg');
+var b='Имя: '+v('nm')+'\nТелефон: '+v('ph')+'\nАвтомобиль: '+v('car')+'\nИнтересует: '+v('it')+'\nКомментарии: '+v('msg');
 location.href='mailto:FourExpedition@yandex.ru?subject='+encodeURIComponent('Заявка с сайта: '+v('it'))+'&body='+encodeURIComponent(b);
 $('#ok').textContent='Открываем почту с готовым письмом. Если не открылась, позвоните +7 995 315 2112.'});
 /* lightbox */
